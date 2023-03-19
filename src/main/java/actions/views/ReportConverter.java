@@ -26,7 +26,8 @@ public class ReportConverter {
                 rv.getCreatedAt(),
                 rv.getUpdatedAt(),
                 rv.getTimeIn(),
-                rv.getTimeOut());
+                rv.getTimeOut(),
+                rv.getLikeCount());
     }
 
     /**
@@ -49,7 +50,8 @@ public class ReportConverter {
                 r.getCreatedAt(),
                 r.getUpdatedAt(),
                 r.getTimeIn(),
-                r.getTimeOut());
+                r.getTimeOut(),
+                r.getLike());
     }
 
     /**
@@ -82,6 +84,7 @@ public class ReportConverter {
         r.setUpdatedAt(rv.getUpdatedAt());
         r.setTimeIn(rv.getTimeIn());
         r.setTimeOut(rv.getTimeOut());
+        r.setLike(rv.getLikeCount());
 
     }
 

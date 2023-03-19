@@ -41,6 +41,9 @@ public interface JpaConst {
     String REP_COL_UPDATED_AT = "updated_at"; //更新日時
     String REP_COL_TIME_IN = "time_in"; //出勤日時（追加）
     String REP_COL_TIME_OUT = "time_out"; //退勤日時（追加）
+    String REP_COL_LIKE = "like_count"; //いいね
+
+
 
     //Entity名
     String ENTITY_EMP = "employee"; //従業員

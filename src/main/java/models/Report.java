@@ -98,4 +98,11 @@ public class Report {
     @Column(name = JpaConst.REP_COL_TIME_OUT, nullable = true)
     private String timeOut;
 
+
+    /**
+     * いいね（追加）
+     */
+    @Column(name = JpaConst.REP_COL_LIKE, nullable = true)
+    private Integer like;
+
 }

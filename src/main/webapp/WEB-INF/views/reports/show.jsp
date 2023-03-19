@@ -26,18 +26,20 @@
                     <td><fmt:formatDate value='${reportDay}' pattern='yyyy-MM-dd' /></td>
                 </tr>
                 <tr>
-                    <th>内容</th>
-                    <td><pre>
-                            <c:out value="${report.content}" />
-                        </pre></td>
+                    <th>タイトル</th>
+                    <td><c:out value="${report.title}" /></td>
                 </tr>
                 <tr>
+                    <th>内容</th>
+                    <td><pre><c:out value="${report.content}" /></pre></td>
+                </tr>
+                                <tr>
                     <th>出勤時間</th>
-                    <td><c:out value="" ${report.timeIn}""/></td>
+                    <td><c:out value="${report.timeIn}"/></td>
                 </tr>
                 <tr>
                     <th>退勤時間</th>
-                    <td><c:out value="" ${report.timeOut}""/></td>
+                    <td><c:out value="${report.timeOut}"/></td>
                 </tr>
 
                 <tr>
@@ -64,8 +66,16 @@
             </p>
         </c:if>
 
-        <p>
-            <a href="<c:url value='?action=${actRep}&command=${commIdx}' />">一覧に戻る</a>
-        </p>
+            <p>
+                <a
+                   href="<c:url value='?action=${actRep}&command=like&id=${report.id}' />">いいね</a>
+
+                    <c:out value="${report.likeCount}" />件
+
+            </p>
+
+            <p>
+                 <a href="<c:url value='?action=${actRep}&command=${commIdx}' />">一覧に戻る</a>
+            </p>
     </c:param>
 </c:import>

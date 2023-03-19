@@ -116,7 +116,8 @@ public class ReportAction extends ActionBase {
                     null,
                     null,
                     getRequestParam(AttributeConst.REP_TIME_IN),
-                    getRequestParam(AttributeConst.REP_TIME_OUT));
+                    getRequestParam(AttributeConst.REP_TIME_OUT),
+                    0);
 
             //日報情報登録
             List<String> errors = service.create(rv);
@@ -235,9 +236,25 @@ public class ReportAction extends ActionBase {
 
                 //一覧画面にリダイレクト
                 redirect(ForwardConst.ACT_REP, ForwardConst.CMD_INDEX);
-
             }
         }
     }
 
+    /**
+     * 更新を行う
+     * @throws ServletException
+     * @throws IOException
+     */
+    public void like() throws ServletException, IOException {
+
+        //いいねを取得する
+        ReportView rv = service.findOne(toNumber(getRequestParam(AttributeConst.REP_ID)));
+
+        //いいね数を設定する
+        rv.setLikeCount(rv.getLikeCount() + 1);
+
+        //日報データを更新する
+        service.update(rv);
+        redirect(ForwardConst.ACT_REP, ForwardConst.CMD_INDEX);
+    }
 }

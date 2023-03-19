@@ -63,4 +63,9 @@ public class ReportView {
      */
     private String timeOut;
 
+    /**
+     * いいね（追加）
+     */
+    private Integer likeCount;
+
 }

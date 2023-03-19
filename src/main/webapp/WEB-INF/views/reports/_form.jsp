@@ -29,11 +29,11 @@
 <textarea  name="${AttributeConst.REP_CONTENT.getValue()}" id="${AttributeConst.REP_CONTENT.getValue()}" rows="10" cols="50">${report.content}</textarea>
 <br /><br />
 
-<label for=""${AttributeConst.REP_TIME_IN.getValue()}"">出勤時間</label><br />
-<input type=""text"" name=""${AttributeConst.REP_TIME_IN.getValue()}"" value=""${report.timeIn}"" />
+<label for="${AttributeConst.REP_TIME_IN.getValue()}">出勤時間</label><br />
+<input type="text" name="${AttributeConst.REP_TIME_IN.getValue()}" value="${report.timeIn}" />
 <br /><br />
-<label for=""${AttributeConst.REP_TIME_OUT.getValue()}"">退勤時間</label><br />
-<input type=""text"" name=""${AttributeConst.REP_TIME_OUT.getValue()}"" value=""${report.timeOut}"" />
+<label for="${AttributeConst.REP_TIME_OUT.getValue()}">退勤時間</label><br />
+<input type="text" name="${AttributeConst.REP_TIME_OUT.getValue()}" value="${report.timeOut}" />
 <br /><br />
 
 <input type="hidden" name="${AttributeConst.REP_ID.getValue()}" value="${report.id}" />
